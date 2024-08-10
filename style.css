@@ -1,0 +1,153 @@
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e67e22; /* Naranja */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilos de los formularios */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    padding: 12px;
+    border: 2px solid #e67e22; /* Naranja */
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #d35400; /* Naranja oscuro */
+    outline: none;
+}
+
+input[type="submit"],
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e67e22; /* Naranja */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #d35400; /* Naranja oscuro */
+    transform: scale(1.05);
+}
+
+input[type="submit"]:disabled,
+button:disabled {
+    background-color: #bdc3c7; /* Gris claro */
+    cursor: not-allowed;
+}
+
+/* Estilos para las listas de reservas */
+#reservationList {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#reservationList li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#reservationList li button {
+    padding: 6px 12px;
+    margin-left: 10px;
+    background-color: #e74c3c; /* Rojo */
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#reservationList li button:hover {
+    background-color: #c0392b; /* Rojo oscuro */
+}
+
+/* Estilos para los mensajes */
+.alert {
+    padding: 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.alert.success {
+    background-color: #2ecc71; /* Verde */
+    color: #fff;
+}
+
+.alert.error {
+    background-color: #e74c3c; /* Rojo */
+    color: #fff;
+}
+
+/* Estilos para la visibilidad de secciones */
+#auth,
+#reservations {
+    width: 100%;
+    display: none;
+}
+
+#auth.active,
+#reservations.active {
+    display: block;
+}
